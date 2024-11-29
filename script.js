@@ -72,9 +72,9 @@ function displayQuestion() {
     optionsContainer.innerHTML = "";
     optionsContainer.appendChild(questionBox);
 
-    document.activeElement.blur();
-
     startTimer();
+
+    document.body.focus();
 }
 
 // handleAnswer Function
