@@ -164,3 +164,9 @@ button:hover {
 #restart-btn:hover {
     background-color: #138496;
 }
+
+@media (max-width: 768px) {
+    .question-btn {
+        outline: none !important;
+    }
+}
