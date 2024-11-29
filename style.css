@@ -164,3 +164,8 @@ button:hover {
 #restart-btn:hover {
     background-color: #138496;
 }
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
