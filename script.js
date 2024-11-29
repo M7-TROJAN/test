@@ -72,9 +72,13 @@ function displayQuestion() {
     optionsContainer.innerHTML = "";
     optionsContainer.appendChild(questionBox);
 
+    // إزالة الفوكس من جميع الأزرار
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(button => button.blur());
+    
     startTimer();
 
-    document.body.focus();
+    buttons.forEach(button => button.blur());
 }
 
 // handleAnswer Function
