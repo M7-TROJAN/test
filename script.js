@@ -62,7 +62,7 @@ function displayQuestion() {
     // Display the options
     question.options.forEach((option, index) => {
         const button = document.createElement("button");
-        button.className = "btn btn-outline-secondary";
+        button.className = "btn btn-outline-secondary question-btn";
         button.textContent = option;
         button.onclick = () => handleAnswer(index + 1);
         button.tabIndex = -1; // علشان نشيل التركيز التلقائي
@@ -74,8 +74,6 @@ function displayQuestion() {
     optionsContainer.appendChild(questionBox);
 
     startTimer();
-
-    document.activeElement.blur();
 }
 
 // handleAnswer Function
@@ -174,7 +172,3 @@ function restartQuiz() {
     document.getElementById("performance-section").classList.add("d-none");
     welcomeSection.classList.remove("d-none");
 }
-
-window.onload = () => {
-    document.activeElement.blur();
-};
