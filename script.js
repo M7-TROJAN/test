@@ -72,6 +72,9 @@ function displayQuestion() {
     optionsContainer.innerHTML = "";
     optionsContainer.appendChild(questionBox);
 
+    const buttons = optionsContainer.querySelectorAll("button");
+    buttons.forEach( button => button.blur()); // علشان لما افتح من التليفون ميعملش هوفر علي اي زرار تلقائيا
+
     startTimer();
 }
 
