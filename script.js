@@ -174,3 +174,7 @@ function restartQuiz() {
     document.getElementById("performance-section").classList.add("d-none");
     welcomeSection.classList.remove("d-none");
 }
+
+window.onload = () => {
+    document.activeElement.blur();
+};
