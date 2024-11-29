@@ -65,6 +65,7 @@ function displayQuestion() {
         button.className = "btn btn-outline-secondary";
         button.textContent = option;
         button.onclick = () => handleAnswer(index + 1);
+        button.tabIndex = -1; // علشان نشيل التركيز التلقائي
         questionBox.appendChild(button);
     });
 
@@ -72,13 +73,9 @@ function displayQuestion() {
     optionsContainer.innerHTML = "";
     optionsContainer.appendChild(questionBox);
 
-    // إزالة الفوكس من جميع الأزرار
-    const buttons = document.querySelectorAll("button");
-    buttons.forEach(button => button.blur());
-    
     startTimer();
 
-    buttons.forEach(button => button.blur());
+    document.activeElement.blur();
 }
 
 // handleAnswer Function
